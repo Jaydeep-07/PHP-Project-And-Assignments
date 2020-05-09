@@ -1,0 +1,73 @@
+.header
+{
+
+	
+	color:red;
+	text-align:center;
+	height:10%;
+	width:80%;
+	font-weight:bold;
+	font-size:50px;
+
+}
+
+
+
+
+.menu
+{
+
+	
+	color:white;
+	height:10%;
+	width:100%;
+	font-size:20px;
+	font-family:bold;
+
+}
+
+.hover
+{
+background-color:red;
+}
+
+
+.content
+{
+
+	width:100%;
+	height:70%;
+	overflow:auto;
+	
+
+}
+
+
+
+
+
+body
+{
+background-image:url("hos.jpg");
+background-size:120%;
+background-repeat:no-repeat;
+
+
+}
+
+
+
+
+
+
+
+.footer
+{
+
+	
+	color:black;
+	text-align:center;
+	height:10%;
+	width:100%;
+
+}

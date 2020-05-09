@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="university.css"?>
+<Univ>
+	<Uname>Pune University</Uname>
+	<City>Pune</City>
+	<Rank>First</Rank>
+
+	<Uname>Mumbai University</Uname>
+	<City>Mumbai</City>
+	<Rank>Third</Rank>
+
+	<Uname>Kolhapur University</Uname>
+	<City>Kolhapur</City>
+	<Rank>Fifth</Rank>
+</Univ>
+

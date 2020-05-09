@@ -1,0 +1,42 @@
+<script type='text/javascript'>
+function validate()
+{
+	x = document.forms["stud"]["sname"];
+	if(x==null || x.value.trim()=='')
+	{
+		alert("Student name cannot be blank.");
+		x.focus();
+		return false;
+	}
+	x = document.forms["stud"]["age"];
+	if(x==null || x.value.trim()=='' || parseInt(x.value)<1 || parseInt(x.value)>20)
+	{
+		alert("Invalid student age.");
+		x.focus();
+		return false;
+	}
+	return true;	
+}
+</script>
+</head>
+<body>
+<form method='post' action='student_info.php' name='stud' onsubmit='return validate()'>
+<table align="center">
+<tr>
+	<td><b>Name:</b></td>
+	<td><input type="text" placeholder="Enter your name here" name="sname"></td>
+</tr>
+<tr>
+	<td><b>Age:</b></td>
+	<td><input type="text" placeholder="Enter your age here" name="age"></td>
+</tr>
+<tr>
+	<td><b>Mobile No:</b></td>
+	<td><input type="text" placeholder="Enter your mobile here" name="mob"></td>
+</tr>
+<tr>
+	<td align='center'><input type="submit" value="Submit"></td>
+	<td align='center'><input type="reset" value="Reset"></td>
+</tr>
+</table>
+</form>

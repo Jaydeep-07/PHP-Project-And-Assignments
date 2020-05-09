@@ -1,0 +1,20 @@
+Enter The String:
+<input type="text" name="str" id="str">
+<input type="button" value="Check" onclick ="alert('No Of Vowels='+check_vowel(str.value))">
+
+
+<script type="text/javascript">
+function check_vowel(s)
+{
+	count=0;
+	for(i=0;i<s.length;i++)
+	{
+		c=s.charAt(i);
+		
+		if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u'||c=='A' || c=='E' ||c=='I'||c=='O' || c=='U')
+		count++;
+	}
+	return count;
+}
+</script>
+

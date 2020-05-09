@@ -1,0 +1,87 @@
+<html>
+<title>
+</title>
+<head>
+<?php include("head.php");?>
+</head>
+<body> 
+<?php include("header.php");?>
+<?php include("menu.php");?>
+<?php
+
+
+pg_connect("host=127.0.0.1 user=postgres password=123 dbname=project");
+
+session_start();
+
+if(isset($_POST["sub"]))
+{
+extract($_POST);
+
+$a=pg_query("select * from user1 where email='$txtnm' or pass='$txtpas'");
+
+if(pg_num_rows($a)>=1)
+{
+?>
+<script>
+alert("Email Already Exits");
+</script>
+
+<?php
+}
+
+else
+{
+
+$b=pg_query("insert into tbluser(uname,email,password)values('$txtnm','$txtem','$txtpas')");
+header("location:create.php");
+}
+
+}//closing of isset if
+
+?>
+
+
+
+<html><fieldset>
+<table>
+<form method="post">
+<tr>
+<td>
+ENTER YOUR NAME
+</td>
+<td>
+<input type="text" name="txtnm" style="background-color:#00FFFF">
+</td>
+</tr>
+<tr>
+<td>
+ENTER YOUR E-M@IL
+</td>
+<td>
+<input type="email" name="txtem" style="background-color:#00FFFF">
+</td>
+</tr>
+<tr>
+<td>
+ENTER YOUR PASSWORD
+</td>
+<td>
+<input type="password" name="txtpas" style="background-color:#00FFFF">
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit" name="sub" value="create" style="background-color:#00FFFF">
+</from>
+</FIELDSET>
+</table>
+
+
+
+
+<?php include("footer.php");?>
+</body>
+</html>
+
+

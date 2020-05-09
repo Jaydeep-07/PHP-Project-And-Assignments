@@ -1,0 +1,7 @@
+<?php
+
+$a=$_GET["id"];
+
+pg_query("update apointt2 set flag=1 where did=$a");
+
+?>
